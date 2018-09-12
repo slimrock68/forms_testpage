@@ -1758,6 +1758,11 @@ body {
   padding-bottom: 60px;
   background-image: url("../../../assets/images/jumbotron.jpg");
 }
+.cid-r3tJt7fOLB {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #ffffff;
+}
 .cid-r3odZvFWcM {
   padding-top: 90px;
   padding-bottom: 90px;
@@ -2272,6 +2277,9 @@ body {
 .cid-r2UFUt6dqk .dropdown-item:hover {
   color: #c1c1c1 !important;
 }
+.cid-r3tGwoyC5G {
+  background-image: url("../../../assets/images/jumbotron.jpg");
+}
 .cid-r3oi9aOI89 {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -2328,23 +2336,6 @@ body {
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
 }
-.cid-r3og5Flbjh .btn.pill {
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
-  background-color: #149dcc;
-  border: none;
-  color: white;
-  padding: 20px 50px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-}
 .cid-r3og5Flbjh .button1:hover {
   background-color: #0f7699;
 }
@@ -2352,4 +2343,32 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.cid-r3tAjUC6g9 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #ffffff;
+}
+.cid-r3tAjUC6g9 .button {
+  background-color: #149dcc;
+  border: none;
+  color: white;
+  font-weight: 500;
+  font-family: Rubik, Helvetica, sans-serif;
+  padding: 19px 52px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  letter-spacing: 1.25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+.cid-r3tAjUC6g9 .button1:hover {
+  background-color: #0f7699;
 }
