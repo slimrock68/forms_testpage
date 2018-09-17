@@ -2038,7 +2038,7 @@
         "title": "Page 3",
         "order": 1,
         "footer_custom": "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js\"></script>\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/js/bootstrap-datepicker.min.js\"></script>\n<script src=\"https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js\"></script>\n<script src=\"https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.min.js\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js\"></script>\n<script src=\"vendor.js\" ></script>\n\n<script src=\"jqueryform.com.min.js?ver=v2.1.1&id=jqueryform-077e25\" ></script>\n\n\n\n\n<script type=\"text/javascript\">\n\n\t// start jqueryform initialization\n\t// --------------------------------\n\tJF.init('#jqueryform-077e25');\n\n</script>",
-        "header_custom": ""
+        "header_custom": "<meta name=\"generator\" content=\"jqueryform.com\">"
       },
       "components": [
         {
