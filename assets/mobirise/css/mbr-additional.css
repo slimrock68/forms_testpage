@@ -3540,3 +3540,119 @@ body {
   display: block;
   text-align: center;
 }
+.cid-r3WkIEjDO7 body {
+  background-color: transparent;
+}
+.cid-r3WkIEjDO7 .jf-form {
+  margin-top: 28px;
+}
+.cid-r3WkIEjDO7 .jf-form > form {
+  margin-bottom: 32px;
+}
+.cid-r3WkIEjDO7 .jf-option-box {
+  display: none;
+  margin-left: 8px;
+}
+.cid-r3WkIEjDO7 .jf-hide {
+  display: none;
+}
+.cid-r3WkIEjDO7 .jf-disabled {
+  background-color: #eeeeee;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.cid-r3WkIEjDO7 .checkbox input[type=checkbox],
+.cid-r3WkIEjDO7 .checkbox-inline input[type=checkbox],
+.cid-r3WkIEjDO7 .radio input[type=radio],
+.cid-r3WkIEjDO7 .radio-inline input[type=radio] {
+  position: absolute;
+  margin-top: 4px \9;
+  margin-left: 0px;
+}
+.cid-r3WkIEjDO7 div.form-group {
+  padding: 8px 8px 4px 8px;
+}
+.cid-r3WkIEjDO7 .mainDescription {
+  margin-bottom: 10px;
+}
+.cid-r3WkIEjDO7 p.description {
+  margin: 0px;
+}
+.cid-r3WkIEjDO7 .responsive img {
+  width: 100%;
+}
+.cid-r3WkIEjDO7 p.error,
+.cid-r3WkIEjDO7 p.validation-error {
+  padding: 5px;
+}
+.cid-r3WkIEjDO7 p.error {
+  margin-top: 10px;
+  color: #a94442;
+}
+.cid-r3WkIEjDO7 p.server-error {
+  font-weight: bold;
+}
+.cid-r3WkIEjDO7 div.thumbnail {
+  position: relative;
+  text-align: center;
+}
+.cid-r3WkIEjDO7 div.thumbnail.selected p {
+  color: #ffffff;
+}
+.cid-r3WkIEjDO7 div.thumbnail .glyphicon-ok-circle {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  color: #ffffff;
+  font-size: 32px;
+}
+.cid-r3WkIEjDO7 .jf-copyright {
+  color: #888888;
+  display: none;
+  margin: 16px;
+}
+.cid-r3WkIEjDO7 .form-group.required .control-label:after {
+  color: #dd0000;
+  content: "*";
+  margin-left: 6px;
+}
+.cid-r3WkIEjDO7 .submit .btn.disabled,
+.cid-r3WkIEjDO7 .submit .btn[disabled] {
+  background: transparent;
+  opacity: 0.75;
+}
+.cid-r3WkIEjDO7 .checkbox label > span,
+.cid-r3WkIEjDO7 .radio label > span {
+  display: block;
+}
+.cid-r3WkIEjDO7 .form-group.inline .control-label,
+.cid-r3WkIEjDO7 .form-group.col-1 .control-label,
+.cid-r3WkIEjDO7 .form-group.col-2 .control-label,
+.cid-r3WkIEjDO7 .form-group.col-3 .control-label {
+  display: block;
+}
+.cid-r3WkIEjDO7 .form-group.inline div.radio,
+.cid-r3WkIEjDO7 .form-group.inline div.checkbox {
+  display: inline-block;
+}
+.cid-r3WkIEjDO7 .form-group.col-1 div.radio,
+.cid-r3WkIEjDO7 .form-group.col-1 div.checkbox {
+  display: block;
+}
+.cid-r3WkIEjDO7 .form-group.col-2 div.radio,
+.cid-r3WkIEjDO7 .form-group.col-2 div.checkbox {
+  display: inline-flex;
+  width: 48%;
+}
+.cid-r3WkIEjDO7 .form-group.col-3 div.radio,
+.cid-r3WkIEjDO7 .form-group.col-3 div.checkbox {
+  display: inline-flex;
+  width: 30%;
+}
+.cid-r3WkIEjDO7 .clearfix:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
