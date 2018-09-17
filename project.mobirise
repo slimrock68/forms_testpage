@@ -41,7 +41,7 @@
     "favicon": "",
     "noImageResize": "",
     "google-analytics": "",
-    "uniqCompNum": 28,
+    "uniqCompNum": 47,
     "versionPublish": "4.8.1",
     "screenshot": "screenshot.png"
   },
@@ -52,7 +52,7 @@
         "title": "Home",
         "meta_descr": "",
         "header_custom": "",
-        "footer_custom": "",
+        "footer_custom": "<!--For hover over pop up translations, per example of Bootstrap 4 Tooltip https://www.w3schools.com/bootstrap4/bootstrap_tooltip.asp-->\n\n<script>\n$(document).ready(function(){\n    $('[data-toggle=\"tooltip\"]').tooltip();   \n});\n</script>\n\n\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js\"></script>\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/js/bootstrap-datepicker.min.js\"></script>\n<script src=\"https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js\"></script>\n<script src=\"https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.min.js\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js\"></script>\n<script src=\"vendor.js\" ></script>\n\n<script src=\"jqueryform.com.min.js?ver=v2.1.1&id=jqueryform-077e25\" ></script>\n\n\n\n\n<script type=\"text/javascript\">\n\n\t// start jqueryform initialization\n\t// --------------------------------\n\tJF.init('#jqueryform-077e25');\n\n</script>",
         "html_before": ""
       },
       "components": [
@@ -485,116 +485,173 @@
           "_styles": {
             "padding-top": "(@paddingTop * 15px)",
             "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".title": {
+              "margin-bottom": "2rem"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#767676"
+            },
+            "a:not([href]):not([tabindex])": {
+              "color": "#fff",
+              "border-radius": "3px"
+            },
+            "a.btn-white:not([href]):not([tabindex])": {
+              "color": "#333"
+            },
+            ".multi-horizontal": {
+              "flex-grow": "1",
+              "-webkit-flex-grow": "1",
+              "max-width": "100%"
+            },
+            ".input-group-btn": {
+              "display": "block",
+              "text-align": "center"
+            },
+            "body": {
+              "background-color": "transparent"
+            },
+            ".jf-form": {
+              "margin-top": "28px"
+            },
+            ".jf-form > form": {
+              "margin-bottom": "32px"
+            },
+            ".jf-option-box": {
+              "display": "none",
+              "margin-left": "8px"
+            },
+            ".jf-hide": {
+              "display": "none"
+            },
+            ".jf-disabled": {
+              "background-color": "#eeeeee",
+              "opacity": "0.6",
+              "pointer-events": "none"
+            },
+            ".checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio]": {
+              "position": "absolute",
+              "margin-top": "4px \\9",
+              "margin-left": "0px"
+            },
+            "div.form-group": {
+              "padding": "8px 8px 4px 8px"
+            },
+            ".mainDescription": {
+              "margin-bottom": "10px"
+            },
+            "p.description": {
+              "margin": "0px"
+            },
+            ".responsive img": {
+              "width": "100%"
+            },
+            "p.error, p.validation-error": {
+              "padding": "5px"
+            },
+            "p.error": {
+              "margin-top": "10px",
+              "color": "#a94442"
+            },
+            "p.server-error": {
+              "font-weight": "bold"
+            },
+            "div.thumbnail": {
+              "position": "relative",
+              "text-align": "center"
+            },
+            "div.thumbnail.selected p": {
+              "color": "#ffffff"
+            },
+            "div.thumbnail .glyphicon-ok-circle": {
+              "position": "absolute",
+              "top": "16px",
+              "left": "16px",
+              "color": "#ffffff",
+              "font-size": "32px"
+            },
+            ".jf-copyright": {
+              "color": "#888888",
+              "display": "none",
+              "margin": "16px"
+            },
+            ".form-group.required .control-label:after": {
+              "color": "#dd0000",
+              "content": "\"*\"",
+              "margin-left": "6px"
+            },
+            ".submit .btn.disabled, .submit .btn[disabled]": {
+              "background": "transparent",
+              "opacity": "0.75"
+            },
+            ".checkbox label > span, .radio label > span": {
+              "display": "block"
+            },
+            ".form-group.inline .control-label, .form-group.col-1 .control-label, .form-group.col-2 .control-label, .form-group.col-3 .control-label": {
+              "display": "block"
+            },
+            ".form-group.inline div.radio, .form-group.inline div.checkbox": {
+              "display": "inline-block"
+            },
+            ".form-group.col-1 div.radio, .form-group.col-1 div.checkbox": {
+              "display": "block"
+            },
+            ".form-group.col-2 div.radio, .form-group.col-2 div.checkbox": {
+              "display": "inline-flex",
+              "width": "48%"
+            },
+            ".form-group.col-3 div.radio, .form-group.col-3 div.checkbox": {
+              "display": "inline-flex",
+              "width": "30%"
+            },
+            ".clearfix:after": {
+              "content": "\".\"",
+              "visibility": "hidden",
+              "display": "block",
+              "height": "0",
+              "clear": "both"
+            },
+            "input[type=radio]": {
+              "float": "left"
+            },
+            "label": {
+              "margin-left": "30px",
+              "display": "block"
+            },
+            ".radio": {
+              "margin-left": "30px"
+            }
+          },
+          "_name": "form1",
+          "_customHTML": "<section class=\"mbr-section form1\" group=\"Forms\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"6\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background2.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.2\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div class=\"title col-12 col-lg-8\">\n                <h2 mbr-if=\"showTitle\" class=\"mbr-section-title align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\">\n                    CONTACT FORM\n                </h2>\n                <h3 mbr-if=\"showSubtitle\" class=\"mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle\">\n                    Easily add subscribe and contact forms without any server-side integration.\n                </h3>\n            </div>\n        </div>\n    </div>\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div mbr-form class=\"media-container-column col-lg-8\">\n                    <div data-form-alert hidden>\n                        Thanks for filling out the form!\n                    </div>\n            \n                    <form class=\"mbr-form\" action method=\"post\" name=\"Mobirise Form\">\n                        <div class=\"row row-sm-offset\">\n                            <div class=\"col-md-4 multi-horizontal\" data-for=\"name\">\n                                <div class=\"form-group\">\n                                    <label mbr-text class=\"form-control-label mbr-fonts-style\" mbr-theme-style=\"display-7\" for=\"name\">Name</label>\n                                    <input type=\"text\" class=\"form-control\" name=\"name\" data-form-field=\"Name\" required>\n                                </div>\n                            </div>\n                            <div class=\"col-md-4 multi-horizontal\" data-for=\"email\">\n                                <div class=\"form-group\">\n                                    <label mbr-text class=\"form-control-label mbr-fonts-style\" mbr-theme-style=\"display-7\" for=\"email\">Email</label>\n                                    <input type=\"email\" class=\"form-control\" name=\"email\" data-form-field=\"Email\" required>\n                                </div>\n                            </div>\n                            \n                            <div class=\"col-md-4 multi-horizontal\" data-for=\"phone\">\n                                <div class=\"form-group\">\n                                    <label mbr-text class=\"form-control-label mbr-fonts-style\" mbr-theme-style=\"display-7\" for=\"phone\">Phone</label>\n                                    <input type=\"tel\" class=\"form-control\" name=\"phone\" data-form-field=\"Phone\">\n                                </div>\n                            </div>\n                        </div>\n                        \n                        <div class=\"form-group f8 required\" data-fid=\"f8\">\n                            <label class=\"control-label\" for=\"f8\">3. Ilaah wuxuu rabaa</label>\n\n                            <div class=\"radio\">\n                              \t<input id=\"f8_1\" name=\"f8\" type=\"radio\" value=\"In isaga ragga keliyuhu jeclaado.\" data-rule-required=\"true\" data-msg-required=\"Raalli ahow walaal, laakiin su'aashan lama dhammaystirin.\">\n  \t                            <label for=\"f8_1\">\n                                    In isaga ragga keliyuhu jeclaado.\n  \t                            </label>\n                            </div>\n\n                            <div class=\"radio\">\n                                <input id=\"f8_2\" name=\"f8\" type=\"radio\" value=\"In isaga dumarka keliyuhu jeclaado.\">\n                                <label for=\"f8_2\">\n                                    In isaga dumarka keliyuhu jeclaado.\n                                </label>\n                            </div>\n\n                            <div class=\"radio\">\n                                <input id=\"f8_3\" name=\"f8\" type=\"radio\" value=\"In isaga ragga iyo dumarka, iyo carruurtuba ay wada jeclaadaan.\">\n                                <label for=\"f8_3\">\n                                    In isaga ragga iyo dumarka, iyo carruurtuba akl;;;kljklj;kljkl;j;klj;lkjl;kj;lkj;lj;lj;lkj;lkj;lkjy wada jeclaadaan.\n                                </label>\n                            </div>\n\n\n                            </div>\n            \n                        <span mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrLink,-mbrBtnAdd,-mbrBtnMove\" class=\"input-group-btn\">\n                            <a href type=\"submit\" class=\"btn btn-primary btn-form\">SEND FORM</a>\n                        </span>\n                    </form>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "r3Foo1TH8C",
+          "_anchor": "form1-11",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
             "background-color": "@bgColor"
           },
           "_name": "content8",
-          "_customHTML": "<section class=\"mbr-section content8\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"color\" title=\"Backgroud Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row title\">\n            <div class=\"col-12 col-md-8\">\n                <div class=\"mbr-section-btn align-center\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-primary\" href=\"page1.html\" data-app-placeholder=\"Type Text\">page 1</a>\n                    <a class=\"btn btn-black-outline\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\">LIVE DEMO</a></div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "r3tJt7fOLB",
+          "_customHTML": "<section class=\"mbr-section content8\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"color\" title=\"Backgroud Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row title\">\n            <div class=\"col-12 col-md-8\">\n                <div class=\"mbr-section-btn align-center\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-primary\" href=\"page1.html\" data-app-placeholder=\"Type Text\">page 1</a>\n                    <a class=\"btn btn-black-outline\" href=\"page2.html\" data-app-placeholder=\"Type Text\">page 2</a></div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "r3WdbRCWac",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
           "_params": {},
-          "_anchor": "content8-r"
-        },
-        {
-          "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            ".title": {
-              "margin-bottom": "2rem"
-            },
-            ".mbr-section-subtitle": {
-              "color": "#767676"
-            },
-            "a:not([href]):not([tabindex])": {
-              "color": "#fff",
-              "border-radius": "3px"
-            },
-            "a.btn-white:not([href]):not([tabindex])": {
-              "color": "#333"
-            },
-            ".multi-horizontal": {
-              "flex-grow": "1",
-              "-webkit-flex-grow": "1",
-              "max-width": "100%"
-            },
-            ".input-group-btn": {
-              "display": "block",
-              "text-align": "center"
-            },
-            ".button": {
-              "background-color": "#4CAF50",
-              "border": "none",
-              "color": "white",
-              "padding": "15px 32px",
-              "text-align": "center",
-              "text-decoration": "none",
-              "display": "inline-block",
-              "font-size": "16px",
-              "margin": "4px 2px",
-              "cursor": "pointer"
-            }
-          },
-          "_name": "form1",
-          "_customHTML": "<section class=\"mbr-section form1\" group=\"Forms\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"6\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background2.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.2\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div class=\"title col-12 col-lg-8\">\n                <h2 mbr-if=\"showTitle\" class=\"mbr-section-title align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\">\n                    CONTACT FORM\n                </h2>\n                <h3 mbr-if=\"showSubtitle\" class=\"mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle\">\n                    Easily add subscribe and contact forms without any server-side integration.\n                </h3>\n            </div>\n        </div>\n    </div>\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div mbr-form class=\"media-container-column col-lg-8\">\n                    <div data-form-alert hidden>\n                        Thanks for filling out the form!\n                    </div>\n            \n                    <form data-licensekey=\"JF-08T99342FC271390X\" name=\"jqueryform-077e25\" id=\"jqueryform-077e25\" action=\"admin.php\" method=\"post\" enctype=\"multipart/form-data\" novalidate autocomplete=\"on\">\n<input type=\"hidden\" name=\"method\" value=\"validateForm\">\n<input type=\"hidden\" id=\"serverValidationFields\" name=\"serverValidationFields\" value>\n\n\n\n<div class=\"form-group f5 required\" data-fid=\"f5\">\n  <label class=\"control-label\" for=\"f5\">1. Ilaah wuxuu joogaa</label>\n\n<div class=\"radio\">\n  \t<input id=\"f5_1\" name=\"f5\" type=\"radio\" value=\"Meel keliya isla mar.\" data-rule-required=\"true\" data-msg-required=\"Raalli ahow walaal, laakiin su'aashan lama dhammaystirin.\">\n  \t<label for=\"f5_1\">\n  \t\tMeel keliya isla mar.\n  \t</label>\n  </div>\n\n  <div class=\"radio\">\n  \t<input id=\"f5_2\" name=\"f5\" type=\"radio\" value=\"Laba meelood oo keliya isku mar.\">\n  \t<label for=\"f5_2\">\n  \t\tLaba meelood oo keliya isku mar.\n  \t</label>\n  </div>\n\n  <div class=\"radio\">\n  \t<input id=\"f5_3\" name=\"f5\" type=\"radio\" value=\"Meel kasta isla mar.\">\n  \t<label for=\"f5_3\">\n  \t\tMeel kasta isla mar.\n  \t</label>\n  </div>\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f7 required\" data-fid=\"f7\">\n  <label class=\"control-label\" for=\"f7\">2. Maalintii afraad ee uumista Ilaah wuxuu abuuray</label>\n\n<div class=\"radio\">\n  \t<input id=\"f7_1\" name=\"f7\" type=\"radio\" value=\"Qorraxda, dayaxa iyo xiddigaha.\" data-rule-required=\"true\" data-msg-required=\"Raalli ahow walaal, laakiin su'aashan lama dhammaystirin.\">\n  \t<label for=\"f7_1\">\n  \t\tQorraxda, dayaxa iyo xiddigaha.\n  \t</label>\n  </div>\n\n  <div class=\"radio\">\n  \t<input id=\"f7_2\" name=\"f7\" type=\"radio\" value=\"Kalluunka, shimbirraha iyo haadda.\">\n  \t<label for=\"f7_2\">\n  \t\tKalluunka, shimbirraha iyo haadda.\n  \t</label>\n  </div>\n\n  <div class=\"radio\">\n  \t<input id=\"f7_3\" name=\"f7\" type=\"radio\" value=\"Nin.\">\n  \t<label for=\"f7_3\">\n  \t\tNin.\n  \t</label>\n  </div>\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f8 required\" data-fid=\"f8\">\n  <label class=\"control-label\" for=\"f8\">3. Ilaah wuxuu rabaa</label>\n\n<div class=\"radio\">\n  \t<input id=\"f8_1\" name=\"f8\" type=\"radio\" value=\"In isaga ragga keliyuhu jeclaado.\" data-rule-required=\"true\" data-msg-required=\"Raalli ahow walaal, laakiin su'aashan lama dhammaystirin.\">\n  \t<label for=\"f8_1\">\n  \t\tIn isaga ragga keliyuhu jeclaado.\n  \t</label>\n  </div>\n\n  <div class=\"radio\">\n  \t<input id=\"f8_2\" name=\"f8\" type=\"radio\" value=\"In isaga dumarka keliyuhu jeclaado.\">\n  \t<label for=\"f8_2\">\n  \t\tIn isaga dumarka keliyuhu jeclaado.\n  \t</label>\n  </div>\n\n  <div class=\"radio\">\n  \t<input id=\"f8_3\" name=\"f8\" type=\"radio\" value=\"In isaga ragga iyo dumarka, iyo carruurtuba ay wada jeclaadaan.\">\n  \t<label for=\"f8_3\">\n  \t\tIn isaga ragga iyo dumarka, iyo carruurtuba ay wada jeclaadaan.\n  \t</label>\n  </div>\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f9 required\" data-fid=\"f9\">\n  <label class=\"control-label\" for=\"f9\">4. Maalintii ugu dambaysay uumista, Ilaah</label>\n\n<div class=\"radio\">\n  \t<input id=\"f9_1\" name=\"f9\" type=\"radio\" value=\"Wuxuu kala soocay birriga iyo badaha.\" data-rule-required=\"true\" data-msg-required=\"Raalli ahow walaal, laakiin su'aashan lama dhammaystirin.\">\n  \t<label for=\"f9_1\">\n  \t\tWuxuu kala soocay birriga iyo badaha.\n  \t</label>\n  </div>\n\n  <div class=\"radio\">\n  \t<input id=\"f9_2\" name=\"f9\" type=\"radio\" value=\"Wuxuu uumay nin.\">\n  \t<label for=\"f9_2\">\n  \t\tWuxuu uumay nin.\n  \t</label>\n  </div>\n\n  <div class=\"radio\">\n  \t<input id=\"f9_3\" name=\"f9\" type=\"radio\" value=\"Wuxuu yiri, &quot;Iftiin ha ahaado&quot;\">\n  \t<label for=\"f9_3\">\n  \t\tWuxuu yiri, \"Iftiin ha ahaado\"\n  \t</label>\n  </div>\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f10 required\" data-fid=\"f10\">\n  <label class=\"control-label\" for=\"f10\">5. Ilaah wuxuu jecel yahay</label>\n\n<div class=\"radio\">\n  \t<input id=\"f10_1\" name=\"f10\" type=\"radio\" value=\"Dembigeenna.\" data-rule-required=\"true\" data-msg-required=\"Raalli ahow walaal, laakiin su'aashan lama dhammaystirin.\">\n  \t<label for=\"f10_1\">\n  \t\tDembigeenna.\n  \t</label>\n  </div>\n\n  <div class=\"radio\">\n  \t<input id=\"f10_2\" name=\"f10\" type=\"radio\" value=\"Innaga iyo dembigeennaba.\">\n  \t<label for=\"f10_2\">\n  \t\tInnaga iyo dembigeennaba.\n  \t</label>\n  </div>\n\n  <div class=\"radio\">\n  \t<input id=\"f10_3\" name=\"f10\" type=\"radio\" value=\"Innaga.\">\n  \t<label for=\"f10_3\">\n  \t\tInnaga.\n  \t</label>\n  </div>\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f15 required\" data-fid=\"f15\">\n  <label class=\"control-label\" for=\"f15\">6. Ilaah waa qoduus, taas aawadeed muxuu ciqaabi doonaa?</label>\n\n\n<input type=\"text\" class=\"form-control\" id=\"f15\" name=\"f15\" value data-rule-required=\"true\" data-msg-required=\"Raalli ahow walaal, laakiin su'aashan lama dhammaystirin.\">\n\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f16 required\" data-fid=\"f16\">\n  <label class=\"control-label\" for=\"f16\">7. Bilowgii Ilaah muxuu abuuray? </label>\n\n\n<input type=\"text\" class=\"form-control\" id=\"f16\" name=\"f16\" value data-rule-required=\"true\" data-msg-required=\"Raalli ahow walaal, laakiin su'aashan lama dhammaystirin.\">\n\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f17 required\" data-fid=\"f17\">\n  <label class=\"control-label\" for=\"f17\">8. Bal yaa weligiis jiray, weligiisna jiri doona?</label>\n\n\n<input type=\"text\" class=\"form-control\" id=\"f17\" name=\"f17\" value data-rule-required=\"true\" data-msg-required=\"Raalli ahow walaal, laakiin su'aashan lama dhammaystirin.\">\n\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f20 required\" data-fid=\"f20\">\n  <label class=\"control-label\" for=\"f20\">9. Waxaa jira Ilaah keliya oo run ah.</label>\n\n<div class=\"radio\">\n  \t<input id=\"f20_1\" name=\"f20\" type=\"radio\" value=\"Run\" data-rule-required=\"true\" data-msg-required=\"Raalli ahow walaal, laakiin su'aashan lama dhammaystirin.\">\n  \t<label for=\"f20_1\">\n  \t\tRun\n  \t</label>\n  </div>\n\n  <div class=\"radio\">\n  \t<input id=\"f20_2\" name=\"f20\" type=\"radio\" value=\"Been\">\n  \t<label for=\"f20_2\">\n  \t\tBeen\n  \t</label>\n  </div>\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f19 required\" data-fid=\"f19\">\n  <label class=\"control-label\" for=\"f19\">10. Ilaah wax kasta wuu og yahay.</label>\n\n<div class=\"radio\">\n  \t<input id=\"f19_1\" name=\"f19\" type=\"radio\" value=\"Run\" data-rule-required=\"true\" data-msg-required=\"Raalli ahow walaal, laakiin su'aashan lama dhammaystirin.\">\n  \t<label for=\"f19_1\">\n  \t\tRun\n  \t</label>\n  </div>\n\n  <div class=\"radio\">\n  \t<input id=\"f19_2\" name=\"f19\" type=\"radio\" value=\"Been\">\n  \t<label for=\"f19_2\">\n  \t\tBeen\n  \t</label>\n  </div>\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f21 required\" data-fid=\"f21\">\n  <label class=\"control-label\" for=\"f21\">Magacaaga oo dhan:</label>\n\n\n<input type=\"text\" class=\"form-control\" id=\"f21\" name=\"f21\" value data-rule-required=\"true\" data-msg-required=\"Fadlan magacaa u qor.\">\n\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f22 required\" data-fid=\"f22\">\n  <label class=\"control-label\" for=\"f22\">Cinwaanka Iimaylka:</label>\n\n\n<input type=\"email\" class=\"form-control\" id=\"f22\" name=\"f22\" value data-rule-email=\"true\" data-rule-required=\"true\" data-msg-required=\"Fadlan cinwaankaaga iimaylka u qor.\">\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f23 \" data-fid=\"f23\">\n  <label class=\"control-label\" for=\"f23\">Magaalada:</label>\n\n\n<input type=\"text\" class=\"form-control\" id=\"f23\" name=\"f23\" value>\n\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f24 \" data-fid=\"f24\">\n  <label class=\"control-label\" for=\"f24\">Waddanka:</label>\n\n\n<input type=\"text\" class=\"form-control\" id=\"f24\" name=\"f24\" value>\n\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f25 \" data-fid=\"f25\">\n  <label class=\"control-label\" for=\"f25\">Su'aal ama Ra'yi:</label>\n\n\n<textarea class=\"form-control\" id=\"f25\" name=\"f25\" rows=\"3\"></textarea>\n\n  \n</div>\n\n\n\n<div class=\"form-group submit f0 \" data-fid=\"f0\" style=\"position: relative;\">\n  <label class=\"control-label sr-only\" for=\"f0\" style=\"display: block;\">Submit Button</label>\n\n  <div class=\"progress\" style=\"display: none; z-index: -1; position: absolute;\">\n    <div class=\"progress-bar progress-bar-striped active\" role=\"progressbar\" style=\"width:100%\">\n    </div>\n  </div>\n\n  <button type=\"submit\" class=\"button\" style=\"z-index: 1;\">\n  \t\tRiix oo dir\n  </button>\n\n</div><div class=\"clearfix\"></div>\n\n<div class=\"submit\">\n  <p class=\"error bg-warning\" style=\"display:none;\">\n    Fadlan, eeg oo hubi  meelaha/qodobada lagaaga baahan yahay oo dhan.</p>\n</div>\n\n<div class=\"clearfix\"></div>\n\n\n</form>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "r3odZvFWcM",
-          "_anchor": "form1-k",
-          "_PHPplaceholders": [],
-          "_JSplaceholders": [],
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            ".title": {
-              "margin-bottom": "2rem"
-            },
-            ".mbr-section-subtitle": {
-              "color": "#767676"
-            },
-            "a:not([href]):not([tabindex])": {
-              "color": "#fff",
-              "border-radius": "3px"
-            },
-            "a.btn-white:not([href]):not([tabindex])": {
-              "color": "#333"
-            },
-            ".multi-horizontal": {
-              "flex-grow": "1",
-              "-webkit-flex-grow": "1",
-              "max-width": "100%"
-            },
-            ".input-group-btn": {
-              "display": "block",
-              "text-align": "center"
-            }
-          },
-          "_name": "form1",
-          "_customHTML": "<section class=\"mbr-section form1\" group=\"Forms\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"6\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background2.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.2\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    \n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div mbr-form class=\"media-container-column col-lg-8\">\n                    <div data-form-alert hidden>Thanks for filling out the form!</div>\n            \n                    <form class=\"mbr-form\" action=\"jrichard68@live.com\" method=\"post\" name=\"Mobirise Form\">\n                        \n       <!--from w3schools.com-->                 \n                        <div class=\"form-check\">\n                          <label class=\"form-check-label\" for=\"radio1\">\n                            <input type=\"radio\" class=\"form-check-input\" id=\"radio1\" name=\"optradio\" value=\"getboot1\">Option 1\n                          </label>\n                        </div>\n                        <div class=\"form-check\">\n                          <label class=\"form-check-label\" for=\"radio2\">\n                            <input type=\"radio\" class=\"form-check-input\" id=\"radio2\" name=\"optradio\" value=\"getboot2\">Option 2\n                          </label>\n                        </div>\n                        \n                        <!--from getbootstrap.com-->\n                        <div class=\"form-check\">\n                          <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios1\" value=\"w3_1\" data-form-field=\"Answer\">\n                          <label class=\"form-check-label\" for=\"exampleRadios1\">\n                            Default radio\n                          </label>\n                        </div>\n                        <div class=\"form-check\">\n                          <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios2\" value=\"w3_2\">\n                          <label class=\"form-check-label\" for=\"exampleRadios2\">\n                            Second default radio\n                          </label>\n                        </div>\n                        <div class=\"form-check\">\n                          <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios3\" value=\"option3\" disabled>\n                          <label class=\"form-check-label\" for=\"exampleRadios3\">\n                            Disabled radio\n                          </label>\n                        </div>\n                        \n                        \n                        <div class=\"row row-sm-offset\">\n                            <div class=\"col-md-4 multi-horizontal\" data-for=\"name\">\n                                <div class=\"form-group\">\n                                    <label mbr-text class=\"form-control-label mbr-fonts-style\" mbr-theme-style=\"display-7\" for=\"name\">Name</label>\n                                    <input type=\"text\" class=\"form-control\" name=\"name\" data-form-field=\"Name\" required>\n                                </div>\n                            </div>\n                            <div class=\"col-md-4 multi-horizontal\" data-for=\"email\">\n                                <div class=\"form-group\">\n                                    <label mbr-text class=\"form-control-label mbr-fonts-style\" mbr-theme-style=\"display-7\" for=\"email\">Email</label>\n                                    <input type=\"email\" class=\"form-control\" name=\"email\" data-form-field=\"Email\" required>\n                                </div>\n                            </div>\n                            <div class=\"col-md-4 multi-horizontal\" data-for=\"phone\">\n                                <div class=\"form-group\">\n                                    <label mbr-text class=\"form-control-label mbr-fonts-style\" mbr-theme-style=\"display-7\" for=\"phone\">Phone</label>\n                                    <input type=\"tel\" class=\"form-control\" name=\"phone\" data-form-field=\"Phone\">\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"form-group\" data-for=\"message\">\n                            <label mbr-text class=\"form-control-label mbr-fonts-style\" mbr-theme-style=\"display-7\" for=\"message\">Message</label>\n                            <textarea type=\"text\" class=\"form-control\" name=\"message\" rows=\"7\" data-form-field=\"Message\"></textarea>\n                        </div>\n            \n                        <span mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrLink,-mbrBtnAdd,-mbrBtnMove\" class=\"input-group-btn\"><a href type=\"submit\" class=\"btn btn-primary btn-form\" data-app-placeholder=\"Type Text\">SEND FORM</a></span>\n                    </form>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "r30RC7XSLO",
-          "_anchor": "form1-d",
-          "_PHPplaceholders": [],
-          "_JSplaceholders": [],
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
+          "_anchor": "content8-1a"
         },
         {
           "_styles": {
@@ -684,8 +741,8 @@
       "settings": {
         "meta_descr": "Website Maker Description",
         "title": "Page 1",
-        "order": 1,
-        "header_custom": "<meta charset=\"utf-8\">\n  <meta name=\"generator\" content=\"jqueryform.com\">\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->\n\n  <title> :: Generated By JQueryForm.Com</title>\n  \n\n  <!-- Bootstrap -->\n  <link href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css\" rel=\"stylesheet\">\n  <link href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css\" rel=\"stylesheet\">\n  <link href=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/css/bootstrap-datepicker3.min.css\" rel=\"stylesheet\">\n  \n\n  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->\n  <!--[if lt IE 9]>\n  <script src=\"https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js\"></script>\n  <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\n  <![endif]-->\n\n  <link href=\"vendor.css\" rel=\"stylesheet\">\n\n<style type=\"text/css\">\nbody{\n  background-color: transparent;\n}\n\n.jf-form{\n  margin-top: 28px;\n}\n\n.jf-form > form{\n  margin-bottom: 32px;\n}\n\n.jf-option-box{\n  display: none;\n  margin-left: 8px;\n}\n\n.jf-hide{\n  display: none;\n}\n\n.jf-disabled {\n    background-color: #eeeeee;\n    opacity: 0.6;\n    pointer-events: none;\n}\n\n/* \noverwrite bootstrap default margin-left, because the <label> doesn't contain the <input> element.\n*/\n.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {\n  position: absolute;\n  margin-top: 4px \\9;\n  margin-left: 0px;\n}\n\ndiv.form-group{\n  padding: 8px 8px 4px 8px;\n}\n\n.mainDescription{\n  margin-bottom: 10px;\n}\n\np.description{\n  margin:0px;\n}\n\n.responsive img{\n  width: 100%;\n}\n\np.error, p.validation-error{\n  padding: 5px;\n}\n\np.error{\n  margin-top: 10px;\n  color:#a94442;\n}\n\np.server-error{\n  font-weight: bold;\n}\n\ndiv.thumbnail{\n  position: relative;\n  text-align: center;\n}\n\ndiv.thumbnail.selected p{\n  color: #ffffff;\n}\n\ndiv.thumbnail .glyphicon-ok-circle{\n  position: absolute;\n  top: 16px;\n  left: 16px;\n  color: #ffffff;\n  font-size: 32px;\n}\n\n.jf-copyright{color: #888888; display: inline-block; margin: 16px;display:none;}\n\n.form-group.required .control-label:after {\n    color: #dd0000;\n    content: \"*\";\n    margin-left: 6px;\n}\n\n.submit .btn.disabled, .submit .btn[disabled]{\n  background: transparent;\n  opacity: 0.75;\n}\n\n/* for image option with span text */\n.checkbox label > span, .radio label > span{\n  display: block;\n}\n\n.form-group.inline .control-label,\n.form-group.col-1 .control-label,\n.form-group.col-2 .control-label,\n.form-group.col-3 .control-label\n{\n  display: block;\n}\n\n.form-group.inline div.radio,\n.form-group.inline div.checkbox{\n  display: inline-block;\n}\n\n.form-group.col-1 div.radio,\n.form-group.col-1 div.checkbox{\n  display: block;\n}\n\n.form-group.col-2 div.radio,\n.form-group.col-2 div.checkbox{\n  display: inline-flex;\n  width: 48%;\n}\n\n.form-group.col-3 div.radio,\n.form-group.col-3 div.checkbox{\n  display: inline-flex;\n  width: 30%;\n}\n\n.clearfix:after {\n   content: \".\";\n   visibility: hidden;\n   display: block;\n   height: 0;\n   clear: both;\n}\n\n</style>",
+        "order": 2,
+        "header_custom": "",
         "footer_custom": "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js\"></script>\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/js/bootstrap-datepicker.min.js\"></script>\n<script src=\"https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js\"></script>\n<script src=\"https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.min.js\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js\"></script>\n<script src=\"vendor.js\" ></script>\n\n<script src=\"jqueryform.com.min.js?ver=v2.1.1&id=jqueryform-077e25\" ></script>\n\n<script>\n$(document).ready(function(){\n    $('[data-toggle=\"tooltip\"]').tooltip();   \n});\n</script>\n\n\n<script type=\"text/javascript\">\n\n\t// start jqueryform initialization\n\t// --------------------------------\n\tJF.init('#jqueryform-077e25');\n\n</script>"
       },
       "components": [
@@ -1197,6 +1254,109 @@
               "display": "flex",
               "justify-content": "center",
               "align-items": "center"
+            },
+            "body": {
+              "background-color": "transparent"
+            },
+            ".jf-form": {
+              "margin-top": "28px"
+            },
+            ".jf-form > form": {
+              "margin-bottom": "32px"
+            },
+            ".jf-option-box": {
+              "display": "none",
+              "margin-left": "8px"
+            },
+            ".jf-hide": {
+              "display": "none"
+            },
+            ".jf-disabled": {
+              "background-color": "#eeeeee",
+              "opacity": "0.6",
+              "pointer-events": "none"
+            },
+            ".checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio]": {
+              "position": "inline",
+              "margin-top": "4px \\9",
+              "margin-left": "5px"
+            },
+            "div.form-group": {
+              "padding": "8px 8px 4px 8px"
+            },
+            ".mainDescription": {
+              "margin-bottom": "10px"
+            },
+            "p.description": {
+              "margin": "0px"
+            },
+            ".responsive img": {
+              "width": "100%"
+            },
+            "p.error, p.validation-error": {
+              "padding": "5px"
+            },
+            "p.error": {
+              "margin-top": "10px",
+              "color": "#a94442"
+            },
+            "p.server-error": {
+              "font-weight": "bold"
+            },
+            "div.thumbnail": {
+              "position": "relative",
+              "text-align": "center"
+            },
+            "div.thumbnail.selected p": {
+              "color": "#ffffff"
+            },
+            "div.thumbnail .glyphicon-ok-circle": {
+              "position": "absolute",
+              "top": "16px",
+              "left": "16px",
+              "color": "#ffffff",
+              "font-size": "32px"
+            },
+            ".jf-copyright": {
+              "color": "#888888",
+              "display": "none",
+              "margin": "16px"
+            },
+            ".form-group.required .control-label:after": {
+              "color": "#dd0000",
+              "content": "\"*\"",
+              "margin-left": "6px"
+            },
+            ".submit .btn.disabled, .submit .btn[disabled]": {
+              "background": "transparent",
+              "opacity": "0.75"
+            },
+            ".checkbox label > span, .radio label > span": {
+              "display": "block"
+            },
+            ".form-group.inline .control-label, .form-group.col-1 .control-label, .form-group.col-2 .control-label, .form-group.col-3 .control-label": {
+              "display": "block"
+            },
+            ".form-group.inline div.radio, .form-group.inline div.checkbox": {
+              "display": "inline-block"
+            },
+            ".form-group.col-1 div.radio, .form-group.col-1 div.checkbox": {
+              "display": "block"
+            },
+            ".form-group.col-2 div.radio, .form-group.col-2 div.checkbox": {
+              "display": "inline-flex",
+              "width": "48%"
+            },
+            ".form-group.col-3 div.radio, .form-group.col-3 div.checkbox": {
+              "display": "inline-flex",
+              "width": "30%"
+            },
+            ".clearfix:after": {
+              "content": "\".\"",
+              "visibility": "hidden",
+              "display": "block",
+              "height": "0",
+              "clear": "both"
             }
           },
           "_name": "form1",
@@ -1207,6 +1367,21 @@
           "_cid": "r3og5Flbjh",
           "_PHPplaceholders": [],
           "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor"
+          },
+          "_name": "content8",
+          "_customHTML": "<section class=\"mbr-section content8\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"color\" title=\"Backgroud Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row title\">\n            <div class=\"col-12 col-md-8\">\n                <div class=\"mbr-section-btn align-center\" mbr-buttons=\"\" mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\">\n                    <a class=\"btn btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n                    <a class=\"btn btn-black-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n",
+          "_cid": "r3tPm9eRnh",
+          "_anchor": "content8-s",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
@@ -1245,6 +1420,756 @@
           "_customHTML": "<section class=\"mbr-section content8\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"color\" title=\"Backgroud Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row title\">\n            <div class=\"col-12 col-md-8\">\n                <div class=\"mbr-section-btn align-center\" mbr-buttons=\"\" mbr-theme-style=\"display-7\" data-toolbar=\"-mbrBtnMove\">\n                    <a class=\"button button1\" href=\"https://mobirise.com\" data-toggle=\"tooltip\" data-placement=\"bottom\" title=\"Learn More\">LEARN MORE</a>\n                    <a class=\"button button1\" href=\"https://mobirise.com\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n",
           "_cid": "r3tAjUC6g9",
           "_anchor": "content8-p",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    },
+    "page2.html": {
+      "settings": {
+        "meta_descr": "Site Maker Description",
+        "title": "Page 2",
+        "order": 1,
+        "footer_custom": "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js\"></script>\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/js/bootstrap-datepicker.min.js\"></script>\n<script src=\"https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js\"></script>\n<script src=\"https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.min.js\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js\"></script>\n<script src=\"vendor.js\" ></script>\n\n<script src=\"jqueryform.com.min.js?ver=v2.1.1&id=jqueryform-077e25\" ></script>\n\n\n\n\n<script type=\"text/javascript\">\n\n\t// start jqueryform initialization\n\t// --------------------------------\n\tJF.init('#jqueryform-077e25');\n\n</script>",
+        "header_custom": ""
+      },
+      "components": [
+        {
+          "_styles": {
+            ".navbar": {
+              "padding": ".5rem 0",
+              "background": "@menuBgColor",
+              "transition": "none",
+              "min-height": "77px"
+            },
+            ".navbar-dropdown.bg-color.transparent.opened": {
+              "background": "@menuBgColor"
+            },
+            "a": {
+              "font-style": "normal"
+            },
+            ".nav-item": {
+              "& span": {
+                "padding-right": "0.4em",
+                "line-height": "0.5em",
+                "vertical-align": "text-bottom",
+                "position": "relative",
+                "text-decoration": "none"
+              },
+              "& a": {
+                "display": "flex",
+                "align-items": "center",
+                "justify-content": "center",
+                "padding": "0.7rem 0 !important",
+                "margin": "0rem .65rem !important"
+              }
+            },
+            ".nav-item:focus, .nav-link:focus": {
+              "outline": "none"
+            },
+            ".btn": {
+              "padding": "0.4rem 1.5rem",
+              ".mbr-iconfont": {
+                "font-size": "1.6rem"
+              },
+              "display": "inline-flex",
+              "align-items": "center"
+            },
+            ".menu-logo": {
+              "margin-right": "auto",
+              ".navbar-brand": {
+                "display": "flex",
+                "margin-left": "5rem",
+                "padding": "0",
+                "transition": "padding .2s",
+                "min-height": "3.8rem",
+                "align-items": "center",
+                ".navbar-caption-wrap": {
+                  "display": "-webkit-flex",
+                  "-webkit-align-items": "center",
+                  "align-items": "center",
+                  "word-break": "break-word",
+                  "min-width": "7rem",
+                  "margin": ".3rem 0",
+                  ".navbar-caption": {
+                    "line-height": "1.2rem !important",
+                    "padding-right": "2rem"
+                  }
+                },
+                ".navbar-logo": {
+                  "font-size": "4rem",
+                  "transition": "font-size 0.25s",
+                  "& img": {
+                    "display": "flex"
+                  },
+                  ".mbr-iconfont": {
+                    "transition": "font-size 0.25s"
+                  }
+                }
+              }
+            },
+            ".navbar-toggleable-sm .navbar-collapse": {
+              "justify-content": "flex-end",
+              "-webkit-justify-content": "flex-end",
+              "padding-right": "5rem",
+              "width": "auto",
+              ".navbar-nav": {
+                "flex-wrap": "wrap",
+                "-webkit-flex-wrap": "wrap",
+                "padding-left": "0",
+                ".nav-item": {
+                  "-webkit-align-self": "center",
+                  "align-self": "center"
+                }
+              },
+              ".navbar-buttons": {
+                "padding-left": "0",
+                "padding-bottom": "0"
+              }
+            },
+            ".dropdown": {
+              ".dropdown-menu": {
+                "background": "@menuBgColor",
+                "display": "none",
+                "position": "absolute",
+                "min-width": "5rem",
+                "padding-top": "1.4rem",
+                "padding-bottom": "1.4rem",
+                "text-align": "left",
+                ".dropdown-item": {
+                  "width": "auto",
+                  "padding": "0.235em 1.5385em 0.235em 1.5385em !important",
+                  "&::after": {
+                    "right": "0.5rem"
+                  }
+                },
+                ".dropdown-submenu": {
+                  "margin": "0"
+                }
+              },
+              "&.open > .dropdown-menu": {
+                "display": "block"
+              }
+            },
+            ".navbar-toggleable-sm": {
+              "&.opened:after": {
+                "position": "absolute",
+                "width": "100vw",
+                "height": "100vh",
+                "content": "''",
+                "background-color": "rgba(0, 0, 0, 0.1)",
+                "left": "0",
+                "bottom": "0",
+                "transform": "translateY(100%)",
+                "-webkit-transform": "translateY(100%)",
+                "z-index": "1000"
+              }
+            },
+            ".navbar.navbar-short": {
+              "min-height": "60px",
+              "transition": "all .2s",
+              "& .navbar-toggler-right": {
+                "top": "20px"
+              },
+              "& .navbar-logo a": {
+                "font-size": "2.5rem !important",
+                "line-height": "2.5rem",
+                "transition": "font-size 0.25s",
+                "& .mbr-iconfont": {
+                  "font-size": "2.5rem !important"
+                },
+                "& img": {
+                  "height": "3rem !important"
+                }
+              },
+              "& .navbar-brand": {
+                "min-height": "3rem"
+              }
+            },
+            "button.navbar-toggler": {
+              "width": "31px",
+              "height": "18px",
+              "cursor": "pointer",
+              "transition": "all .2s",
+              "top": "1.5rem",
+              "right": "1rem",
+              "&:focus": {
+                "outline": "none"
+              },
+              ".hamburger span": {
+                "position": "absolute",
+                "right": "0",
+                "width": "30px",
+                "height": "2px",
+                "border-right": "5px",
+                "background-color": "@hamburgerColor",
+                "&:nth-child(1)": {
+                  "top": "0",
+                  "transition": "all .2s"
+                },
+                "&:nth-child(2)": {
+                  "top": "8px",
+                  "transition": "all .15s"
+                },
+                "&:nth-child(3)": {
+                  "top": "8px",
+                  "transition": "all .15s"
+                },
+                "&:nth-child(4)": {
+                  "top": "16px",
+                  "transition": "all .2s"
+                }
+              }
+            },
+            "nav.opened .hamburger span": {
+              "&:nth-child(1)": {
+                "top": "8px",
+                "width": "0",
+                "opacity": "0",
+                "right": "50%",
+                "transition": "all .2s"
+              },
+              "&:nth-child(2)": {
+                "-webkit-transform": "rotate(45deg)",
+                "transform": "rotate(45deg)",
+                "transition": "all .25s"
+              },
+              "&:nth-child(3)": {
+                "-webkit-transform": "rotate(-45deg)",
+                "transform": "rotate(-45deg)",
+                "transition": "all .25s"
+              },
+              "&:nth-child(4)": {
+                "top": "8px",
+                "width": "0",
+                "opacity": "0",
+                "right": "50%",
+                "transition": "all .2s"
+              }
+            },
+            ".collapsed": {
+              "&.navbar-expand": {
+                "flex-direction": "column"
+              },
+              ".btn": {
+                "display": "flex"
+              },
+              ".navbar-collapse": {
+                "display": "none !important",
+                "padding-right": "0 !important",
+                "&.collapsing,&.show": {
+                  "display": "block !important",
+                  ".navbar-nav": {
+                    "display": "block",
+                    "text-align": "center",
+                    ".nav-item": {
+                      "clear": "both",
+                      "& when (@showButtons = false)": {
+                        "&:last-child": {
+                          "margin-bottom": "1rem"
+                        }
+                      }
+                    }
+                  },
+                  ".navbar-buttons": {
+                    "text-align": "center",
+                    "&:last-child": {
+                      "margin-bottom": "1rem"
+                    }
+                  }
+                }
+              },
+              "button.navbar-toggler": {
+                "display": "block"
+              },
+              ".navbar-brand": {
+                "margin-left": "1rem !important"
+              },
+              ".navbar-toggleable-sm": {
+                "flex-direction": "column",
+                "-webkit-flex-direction": "column"
+              },
+              ".dropdown": {
+                ".dropdown-menu": {
+                  "width": "100%",
+                  "text-align": "center",
+                  "position": "relative",
+                  "opacity": "0",
+                  "display": "block",
+                  "height": "0",
+                  "visibility": "hidden",
+                  "padding": "0",
+                  "transition-duration": ".5s",
+                  "transition-property": "opacity,padding,height"
+                },
+                "&.open > .dropdown-menu": {
+                  "position": "relative",
+                  "opacity": "1",
+                  "height": "auto",
+                  "padding": "1.4rem 0",
+                  "visibility": "visible"
+                },
+                ".dropdown-submenu": {
+                  "left": "0",
+                  "text-align": "center",
+                  "width": "100%"
+                },
+                ".dropdown-toggle[data-toggle=\"dropdown-submenu\"]::after": {
+                  "margin-top": "0",
+                  "position": "inherit",
+                  "right": "0",
+                  "top": "50%",
+                  "display": "inline-block",
+                  "width": "0",
+                  "height": "0",
+                  "margin-left": ".3em",
+                  "vertical-align": "middle",
+                  "content": "\"\"",
+                  "border-top": ".30em solid",
+                  "border-right": ".30em solid transparent",
+                  "border-left": ".30em solid transparent"
+                }
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".navbar-expand": {
+                "flex-direction": "column"
+              },
+              "img": {
+                "height": "3.8rem !important"
+              },
+              ".btn": {
+                "display": "flex"
+              },
+              "button.navbar-toggler": {
+                "display": "block"
+              },
+              ".navbar-brand": {
+                "margin-left": "1rem !important"
+              },
+              ".navbar-toggleable-sm": {
+                "flex-direction": "column",
+                "-webkit-flex-direction": "column"
+              },
+              ".navbar-collapse": {
+                "display": "none !important",
+                "padding-right": "0 !important",
+                "&.collapsing,&.show": {
+                  "display": "block !important",
+                  ".navbar-nav": {
+                    "display": "block",
+                    "text-align": "center",
+                    ".nav-item": {
+                      "clear": "both",
+                      "& when (@showButtons = false)": {
+                        "&:last-child": {
+                          "margin-bottom": "1rem"
+                        }
+                      }
+                    }
+                  },
+                  ".navbar-buttons": {
+                    "text-align": "center",
+                    "&:last-child": {
+                      "margin-bottom": "1rem"
+                    }
+                  }
+                }
+              },
+              ".dropdown": {
+                ".dropdown-menu": {
+                  "width": "100%",
+                  "text-align": "center",
+                  "position": "relative",
+                  "opacity": "0",
+                  "display": "block",
+                  "height": "0",
+                  "visibility": "hidden",
+                  "padding": "0",
+                  "transition-duration": ".5s",
+                  "transition-property": "opacity,padding,height"
+                },
+                "&.open > .dropdown-menu": {
+                  "position": "relative",
+                  "opacity": "1",
+                  "height": "auto",
+                  "padding": "1.4rem 0",
+                  "visibility": "visible"
+                },
+                ".dropdown-submenu": {
+                  "left": "0",
+                  "text-align": "center",
+                  "width": "100%"
+                },
+                ".dropdown-toggle[data-toggle=\"dropdown-submenu\"]::after": {
+                  "margin-top": "0",
+                  "position": "inherit",
+                  "right": "0",
+                  "top": "50%",
+                  "display": "inline-block",
+                  "width": "0",
+                  "height": "0",
+                  "margin-left": ".3em",
+                  "vertical-align": "middle",
+                  "content": "\"\"",
+                  "border-top": ".30em solid",
+                  "border-right": ".30em solid transparent",
+                  "border-left": ".30em solid transparent"
+                }
+              }
+            },
+            "@media (min-width: 767px)": {
+              ".menu-logo": {
+                "flex-shrink": "0"
+              }
+            },
+            ".navbar-collapse": {
+              "flex-basis": "auto"
+            },
+            ".nav-link:hover, .dropdown-item:hover": {
+              "color": "@itemsHoverColor !important"
+            }
+          },
+          "_name": "menu1",
+          "_customHTML": "<section class=\"menu\" group=\"Menu\" plugins=\"DropDown, TouchSwipe\" always-top global once=\"menu\" not-draggable position-absolute>\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked>\n        <input type=\"range\" title=\"Logo Size\" inline name=\"logoSize\" min=\"3.8\" max=\"8\" step=\"0.1\" value=\"3.8\" condition=\"showLogo\">\n        <input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\" checked>\n        <input type=\"checkbox\" title=\"Show Menu Items\" name=\"showItems\" checked>\n        <input type=\"color\" title=\"Items Hover Color\" name=\"itemsHoverColor\" value=\"#c1c1c1\" condition=\"showItems\">\n        <input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\" checked>\n        <input type=\"checkbox\" title=\"Sticky\" name=\"sticky\" checked>\n        <input type=\"checkbox\" title=\"Collapsed\" name=\"collapsed\">\n        <input type=\"checkbox\" title=\"Transparent\" name=\"transparent\" checked>\n        <input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#ffffff\">\n        <input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#333333\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <nav class=\"navbar navbar-expand beta-menu navbar-dropdown align-items-center\" mbr-class=\"{'navbar-fixed-top': sticky,\n        'navbar-toggleable-sm': !collapsed,\n        'collapsed': collapsed,\n        'bg-color transparent': transparent}\">\n        <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n            <div class=\"hamburger\">\n                <span></span>\n                <span></span>\n                <span></span>\n                <span></span>\n            </div>\n        </button>\n        <div class=\"menu-logo\">\n            <div class=\"navbar-brand\">\n                <span mbr-if=\"showLogo\" class=\"navbar-logo\">\n                    <a href=\"https://mobirise.com\">\n                         <img src=\"../_images/logo2.png\" alt=\"Mobirise\" mbr-style=\"{'height': logoSize + 'rem'}\">\n                    </a>\n                </span>\n                <span mbr-if=\"showBrand\" mbr-buttons mbr-theme-style=\"display-4\" class=\"navbar-caption-wrap\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove\">\n                    <a class=\"navbar-caption text-white\" data-app-selector=\".navbar-caption\" href=\"https://mobirise.com\">\n                        MOBIRISE\n                    </a>\n                </span>\n            </div>\n        </div>\n        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n            <ul mbr-if=\"showItems\" mbr-menu class=\"navbar-nav nav-dropdown\" mbr-theme-style=\"display-4\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish && !showBrand && !showLogo}\">\n                <li class=\"nav-item\">\n                    <a class=\"nav-link link text-white\" href=\"https://mobirise.com\" data-app-selector=\".nav-link,.dropdown-item\">\n                        <span class=\"mbri-home mbr-iconfont mbr-iconfont-btn\"></span>\n                        Services\n                    </a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link link text-white\" href=\"https://mobirise.com\" data-app-selector=\".nav-link,.dropdown-item\">\n                        <span class=\"mbri-search mbr-iconfont mbr-iconfont-btn\"></span>\n                        About Us\n                    </a>\n                </li>\n            </ul>\n            <div mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" class=\"navbar-buttons mbr-section-btn\">\n                <a class=\"btn btn-sm btn-primary\" href=\"https://mobirise.com\">\n                    <span class=\"mbri-save mbr-iconfont mbr-iconfont-btn \" data-app-selector=\".mbr-iconfont-btn\"></span>\n                    Try It Now!\n                </a>\n            </div>\n        </div>\n    </nav>\n</section>",
+          "_cid": "r2UFUt6dqk",
+          "_anchor": "menu1-12",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "menu",
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            }
+          },
+          "_name": "header2",
+          "_customHTML": "<section group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n         'mbr-fullscreen': fullScreen,\n         'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/jumbotron.jpg\" parallax selected>\n            <input type=\"color\" title=\"Background Color\" value=\"#073B4C\">\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#767676\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container align-center\">\n        <div class=\"row justify-content-md-center\">\n            <div class=\"mbr-white col-md-10\">\n                <h1 class=\"mbr-section-title mbr-bold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">\n                    FULL SCREEN INTRO\n                </h1>\n                <h3 class=\"mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showSubTitle\">\n                    Beautiful mobile websites\n                </h3>\n                <p class=\"mbr-text pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                    Click any text to edit or style it. Select text to insert a link. Click blue \"Gear\" icon in the top right corner to hide/show buttons, text, title and change the block background. Click red \"+\" in the bottom right corner to add a new block. Use the top left menu to create new pages, sites and add themes.\n                </p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n                    <a class=\"btn btn-md btn-secondary\" href=\"https://mobirise.com\">LEARN MORE</a>\n                    <a class=\"btn btn-md btn-white-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div mbr-if=\"showArrow\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
+          "_cid": "r3VrEHRun0",
+          "_anchor": "header2-13",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".title": {
+              "margin-bottom": "2rem"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#767676"
+            },
+            "a:not([href]):not([tabindex])": {
+              "color": "#fff",
+              "border-radius": "3px"
+            },
+            "a.btn-white:not([href]):not([tabindex])": {
+              "color": "#333"
+            },
+            ".multi-horizontal": {
+              "flex-grow": "1",
+              "-webkit-flex-grow": "1",
+              "max-width": "100%"
+            },
+            ".input-group-btn": {
+              "display": "block",
+              "text-align": "center"
+            },
+            "body": {
+              "background-color": "transparent"
+            },
+            ".jf-form": {
+              "margin-top": "28px"
+            },
+            ".jf-form > form": {
+              "margin-bottom": "32px"
+            },
+            ".jf-option-box": {
+              "display": "none",
+              "margin-left": "8px"
+            },
+            ".jf-hide": {
+              "display": "none"
+            },
+            ".jf-disabled": {
+              "background-color": "#eeeeee",
+              "opacity": "0.6",
+              "pointer-events": "none"
+            },
+            ".checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio]": {
+              "position": "absolute",
+              "margin-top": "4px \\9",
+              "margin-left": "0px"
+            },
+            "div.form-group": {
+              "padding": "8px 8px 4px 8px"
+            },
+            ".mainDescription": {
+              "margin-bottom": "10px"
+            },
+            "p.description": {
+              "margin": "0px"
+            },
+            ".responsive img": {
+              "width": "100%"
+            },
+            "p.error, p.validation-error": {
+              "padding": "5px"
+            },
+            "p.error": {
+              "margin-top": "10px",
+              "color": "#a94442"
+            },
+            "p.server-error": {
+              "font-weight": "bold"
+            },
+            "div.thumbnail": {
+              "position": "relative",
+              "text-align": "center"
+            },
+            "div.thumbnail.selected p": {
+              "color": "#ffffff"
+            },
+            "div.thumbnail .glyphicon-ok-circle": {
+              "position": "absolute",
+              "top": "16px",
+              "left": "16px",
+              "color": "#ffffff",
+              "font-size": "32px"
+            },
+            ".jf-copyright": {
+              "color": "#888888",
+              "display": "none",
+              "margin": "16px"
+            },
+            ".form-group.required .control-label:after": {
+              "color": "#dd0000",
+              "content": "\"*\"",
+              "margin-left": "6px"
+            },
+            ".submit .btn.disabled, .submit .btn[disabled]": {
+              "background": "transparent",
+              "opacity": "0.75"
+            },
+            ".checkbox label > span, .radio label > span": {
+              "display": "block"
+            },
+            ".form-group.inline .control-label, .form-group.col-1 .control-label, .form-group.col-2 .control-label, .form-group.col-3 .control-label": {
+              "display": "block"
+            },
+            ".form-group.inline div.radio, .form-group.inline div.checkbox": {
+              "display": "inline-block"
+            },
+            ".form-group.col-1 div.radio, .form-group.col-1 div.checkbox": {
+              "display": "block"
+            },
+            ".form-group.col-2 div.radio, .form-group.col-2 div.checkbox": {
+              "display": "inline-flex",
+              "width": "48%"
+            },
+            ".form-group.col-3 div.radio, .form-group.col-3 div.checkbox": {
+              "display": "inline-flex",
+              "width": "30%"
+            },
+            ".clearfix:after": {
+              "content": "\".\"",
+              "visibility": "hidden",
+              "display": "block",
+              "height": "0",
+              "clear": "both"
+            }
+          },
+          "_name": "form1",
+          "_customHTML": "<section class=\"mbr-section form1\" group=\"Forms\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"6\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background2.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.2\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    \n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div mbr-form class=\"media-container-column col-lg-8\">\n                    <div data-form-alert hidden>Thanks for filling out the form!</div>\n            \n                    <form class=\"mbr-form\" action=\"jrichard68@live.com\" method=\"post\" name=\"Mobirise Form\">\n                        <div class=\"row row-sm-offset\">\n                            <div class=\"col-md-4 multi-horizontal\" data-for=\"name\">\n                                <div class=\"form-group\">\n                                    <label mbr-text class=\"form-control-label mbr-fonts-style\" mbr-theme-style=\"display-7\" for=\"name\">Name</label>\n                                    <input type=\"text\" class=\"form-control\" name=\"name\" data-form-field=\"Name\" required>\n                                </div>\n                            </div>\n                            <div class=\"col-md-4 multi-horizontal\" data-for=\"email\">\n                                <div class=\"form-group\">\n                                    <label mbr-text class=\"form-control-label mbr-fonts-style\" mbr-theme-style=\"display-7\" for=\"email\">Email</label>\n                                    <input type=\"email\" class=\"form-control\" name=\"email\" data-form-field=\"Email\" required>\n                                </div>\n                            </div>\n                            <div class=\"col-md-4 multi-horizontal\" data-for=\"phone\">\n                                <div class=\"form-group\">\n                                    <label mbr-text class=\"form-control-label mbr-fonts-style\" mbr-theme-style=\"display-7\" for=\"phone\">Phone</label>\n                                    <input type=\"tel\" class=\"form-control\" name=\"phone\" data-form-field=\"Phone\">\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"form-group\" data-for=\"message1\">\n                            <label mbr-text class=\"form-control-label mbr-fonts-style\" mbr-theme-style=\"display-7\" for=\"message1\">Message</label>\n                            <textarea type=\"text\" class=\"form-control\" name=\"message1\" rows=\"7\" data-form-field=\"Message1\"></textarea>\n                        </div>\n                        \n                        <div class=\"form-group f5 required\" data-fid=\"f5\">\n  <label class=\"control-label\" for=\"f5\">1. Ilaah wuxuu joogaa</label>\n\n<div class=\"form-check\">\n  \t<input  class=\"form-check-input\" id=\"f5_1\" name=\"f5\"  type=\"radio\" value=\"Meel keliya isla mar.\" \n    data-rule-required=\"true\" data-msg-required=\"Raalli ahow walaal, laakiin su&#039;aashan lama dhammaystirin.\"  >\n  \t<label  class=\"form-check-label\" for=\"f5_1\">\n  \t\tMeel keliya isla mar.\n  \t</label>\n  </div>\n\n  <div class=\"form-check\">\n  \t<input  class=\"form-check-input\" id=\"f5_2\" name=\"f5\"  type=\"radio\" value=\"Laba meelood oo keliya isku mar.\"  >\n  \t<label  class=\"form-check-label\" for=\"f5_2\">\n  \t\tLaba meelood oo keliya isku mar.kjkl;j;kljk;j;kj;klj;lkj;lkj;lkj;lkj;lkj;lkj;lkj;lkj;lkjl;kj;lkj;kl\n  \t</label>\n  </div>\n\n  <div class=\"form-check\">\n  \t<input  class=\"form-check-input\" id=\"f5_3\" name=\"f5\"  type=\"radio\" value=\"Meel kasta isla mar.\"  >\n  \t<label  class=\"form-check-label\" for=\"f5_3\">\n  \t\tMeel kasta isla mar.\n  \t</label>\n  </div>\n\n  \n</div>\n                        \n                        <div class=\"form-check\">\n                          <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios1\" value=\"option1\">\n                          <label class=\"form-check-label\" for=\"exampleRadios1\">\n                            Default radio\n                          </label>\n                        </div>\n                        <div class=\"form-check\">\n                          <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios2\" value=\"option2\">\n                          <label class=\"form-check-label\" for=\"exampleRadios2\">\n                            Second default radio kjsjas;dklfjkl;fj ;l jfkl;jf;jf l;d fjkl;jfkl;dj l lkjf d;lj \n                          </label>\n                        </div>\n                        <div class=\"form-check\">\n                          <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios3\" value=\"option3\" >\n                          <label class=\"form-check-label\" for=\"exampleRadios3\">\n                            third radio\n                          </label>\n                        </div>\n                        \n                        <span mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrLink,-mbrBtnAdd,-mbrBtnMove\" class=\"input-group-btn\">\n                            <a href type=\"submit\" class=\"btn btn-primary btn-form\">SEND FORM</a>\n                        </span>\n                    </form>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "r3VrIoo5AB",
+          "_anchor": "form1-14",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-text, blockquote": {
+              "color": "#767676"
+            }
+          },
+          "_name": "content1",
+          "_customHTML": "<section class=\"mbr-section article content1\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 col-md-8 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline=\"\" mbr-article=\"\">\n                <b> Make your own website in a few clicks!</b> Mobirise helps you cut down development time by providing you with a flexible website editor with a drag and drop interface. Mobirise Website Builder creates responsive, retina and <i>mobile friendly websites</i> in a few clicks. Mobirise is one of the easiest website development tools <a href=\"https://mobirise.com/\">available</a> today. It also gives you the freedom to develop as many websites as you like given the fact that it is a desktop app.\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "r3WcFYvNmk",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content1-19"
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".title": {
+              "margin-bottom": "2rem"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#767676"
+            },
+            "a:not([href]):not([tabindex])": {
+              "color": "#fff",
+              "border-radius": "3px"
+            },
+            "a.btn-white:not([href]):not([tabindex])": {
+              "color": "#333"
+            },
+            ".multi-horizontal": {
+              "flex-grow": "1",
+              "-webkit-flex-grow": "1",
+              "max-width": "100%"
+            },
+            ".input-group-btn": {
+              "display": "block",
+              "text-align": "center"
+            },
+            "body": {
+              "background-color": "transparent"
+            },
+            ".jf-form": {
+              "margin-top": "28px"
+            },
+            ".jf-form > form": {
+              "margin-bottom": "32px"
+            },
+            ".jf-option-box": {
+              "display": "none",
+              "margin-left": "8px"
+            },
+            ".jf-hide": {
+              "display": "none"
+            },
+            ".jf-disabled": {
+              "background-color": "#eeeeee",
+              "opacity": "0.6",
+              "pointer-events": "none"
+            },
+            ".checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio]": {
+              "position": "absolute",
+              "margin-top": "4px \\9",
+              "margin-left": "0px"
+            },
+            "div.form-group": {
+              "padding": "8px 8px 4px 8px"
+            },
+            ".mainDescription": {
+              "margin-bottom": "10px"
+            },
+            "p.description": {
+              "margin": "0px"
+            },
+            ".responsive img": {
+              "width": "100%"
+            },
+            "p.error, p.validation-error": {
+              "padding": "5px"
+            },
+            "p.error": {
+              "margin-top": "10px",
+              "color": "#a94442"
+            },
+            "p.server-error": {
+              "font-weight": "bold"
+            },
+            "div.thumbnail": {
+              "position": "relative",
+              "text-align": "center"
+            },
+            "div.thumbnail.selected p": {
+              "color": "#ffffff"
+            },
+            "div.thumbnail .glyphicon-ok-circle": {
+              "position": "absolute",
+              "top": "16px",
+              "left": "16px",
+              "color": "#ffffff",
+              "font-size": "32px"
+            },
+            ".jf-copyright": {
+              "color": "#888888",
+              "display": "none",
+              "margin": "16px"
+            },
+            ".form-group.required .control-label:after": {
+              "color": "#dd0000",
+              "content": "\"*\"",
+              "margin-left": "6px"
+            },
+            ".submit .btn.disabled, .submit .btn[disabled]": {
+              "background": "transparent",
+              "opacity": "0.75"
+            },
+            ".checkbox label > span, .radio label > span": {
+              "display": "block"
+            },
+            ".form-group.inline .control-label, .form-group.col-1 .control-label, .form-group.col-2 .control-label, .form-group.col-3 .control-label": {
+              "display": "block"
+            },
+            ".form-group.inline div.radio, .form-group.inline div.checkbox": {
+              "display": "inline-block"
+            },
+            ".form-group.col-1 div.radio, .form-group.col-1 div.checkbox": {
+              "display": "block"
+            },
+            ".form-group.col-2 div.radio, .form-group.col-2 div.checkbox": {
+              "display": "inline-flex",
+              "width": "48%"
+            },
+            ".form-group.col-3 div.radio, .form-group.col-3 div.checkbox": {
+              "display": "inline-flex",
+              "width": "30%"
+            },
+            ".clearfix:after": {
+              "content": "\".\"",
+              "visibility": "hidden",
+              "display": "block",
+              "height": "0",
+              "clear": "both"
+            }
+          },
+          "_name": "form1",
+          "_customHTML": "<section class=\"mbr-section form1\" group=\"Forms\" data-bg-video=\"{{bg.type == 'video' &amp;&amp; bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"6\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"6\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked=\"\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax=\"\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background2.jpg\" parallax=\"\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected=\"\">\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n        <input type=\"range\" inline=\"\" title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.2\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay &amp;&amp; bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n   \n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div mbr-form=\"\" class=\"media-container-column col-lg-8\">\n                    <div data-form-alert=\"\" hidden=\"\">\n                        Thanks for filling out the form!\n                    </div>\n            \n                    <form class=\"mbr-form\" action=\"\" method=\"post\" name=\"Mobirise Form\">\n                        <div class=\"row row-sm-offset\">\n                            <div class=\"col-md-4 multi-horizontal\" data-for=\"name\">\n                                <div class=\"form-group\">\n                                    <label mbr-text=\"\" class=\"form-control-label mbr-fonts-style\" mbr-theme-style=\"display-7\" for=\"name\">Name</label>\n                                    <input type=\"text\" class=\"form-control\" name=\"name\" data-form-field=\"Name\" required=\"\">\n                                </div>\n                            </div>\n                            <div class=\"col-md-4 multi-horizontal\" data-for=\"email\">\n                                <div class=\"form-group\">\n                                    <label mbr-text=\"\" class=\"form-control-label mbr-fonts-style\" mbr-theme-style=\"display-7\" for=\"email\">Email</label>\n                                    <input type=\"email\" class=\"form-control\" name=\"email\" data-form-field=\"Email\" required=\"\">\n                                </div>\n                            </div>\n                            <div class=\"col-md-4 multi-horizontal\" data-for=\"phone\">\n                                <div class=\"form-group\">\n                                    <label mbr-text=\"\" class=\"form-control-label mbr-fonts-style\" mbr-theme-style=\"display-7\" for=\"phone\">Phone</label>\n                                    <input type=\"tel\" class=\"form-control\" name=\"phone\" data-form-field=\"Phone\">\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"form-group\" data-for=\"message\">\n                            <label mbr-text=\"\" class=\"form-control-label mbr-fonts-style\" mbr-theme-style=\"display-7\" for=\"message\">Message</label>\n                            <textarea type=\"text\" class=\"form-control\" name=\"message\" rows=\"7\" data-form-field=\"Message\"></textarea>\n                        </div>\n            \n                        \n<div class=\"form-group f5 required\" data-fid=\"f5\">\n  <label class=\"control-label\" for=\"f5\">1. Ilaah wuxuu joogaa</label>\n\n<div class=\"form-check\">\n  \t<input class=\"form-check-input\"  id=\"f5_1\" name=\"f5\"  type=\"radio\" value=\"Meel keliya isla mar.\" \n    data-rule-required=\"true\" data-msg-required=\"Raalli ahow walaal, laakiin su&#039;aashan lama dhammaystirin.\"  >\n  \t<label class=\"form-check-label\"  for=\"f5_1\">\n  \t\tMeel keliya isla mar.\n  \t</label>\n  </div>\n\n  <div class=\"form-check\">\n  \t<input class=\"form-check-input\"  id=\"f5_2\" name=\"f5\"  type=\"radio\" value=\"Laba meelood oo keliya isku mar.\"  >\n  \t<label class=\"form-check-label\"  for=\"f5_2\">\n  \t\tLaba meelood oo keliya isku mar.\n  \t</label>\n  </div>\n\n  <div class=\"form-check\">\n  \t<input class=\"form-check-input\"  id=\"f5_3\" name=\"f5\"  type=\"radio\" value=\"Meel kasta isla mar.\"  >\n  \t<label class=\"form-check-label\"  for=\"f5_3\">\n  \t\tMeel kasta isla mar.\n  \t</label>\n  </div>\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f7 required\" data-fid=\"f7\">\n  <label class=\"control-label\" for=\"f7\">2. Maalintii afraad ee uumista Ilaah wuxuu abuuray</label>\n\n<div class=\"form-check\">\n  \t<input class=\"form-check-input\"  id=\"f7_1\" name=\"f7\"  type=\"radio\" value=\"Qorraxda, dayaxa iyo xiddigaha.\" \n    data-rule-required=\"true\" data-msg-required=\"Raalli ahow walaal, laakiin su&#039;aashan lama dhammaystirin.\"  >\n  \t<label class=\"form-check-label\"  for=\"f7_1\">\n  \t\tQorraxda, dayaxa iyo xiddigaha.\n  \t</label>\n  </div>\n\n  <div class=\"form-check\">\n  \t<input class=\"form-check-input\"  id=\"f7_2\" name=\"f7\"  type=\"radio\" value=\"Kalluunka, shimbirraha iyo haadda.\"  >\n  \t<label class=\"form-check-label\"  for=\"f7_2\">\n  \t\tKalluunka, shimbirraha iyo haadda.\n  \t</label>\n  </div>\n\n  <div class=\"form-check\">\n  \t<input class=\"form-check-input\"  id=\"f7_3\" name=\"f7\"  type=\"radio\" value=\"Nin.\"  >\n  \t<label class=\"form-check-label\"  for=\"f7_3\">\n  \t\tNin.\n  \t</label>\n  </div>\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f8 required\" data-fid=\"f8\">\n  <label class=\"control-label\" for=\"f8\">3. Ilaah wuxuu rabaa</label>\n\n<div class=\"form-check\">\n  \t<input class=\"form-check-input\"  id=\"f8_1\" name=\"f8\"  type=\"radio\" value=\"In isaga ragga keliyuhu jeclaado.\" \n    data-rule-required=\"true\" data-msg-required=\"Raalli ahow walaal, laakiin su&#039;aashan lama dhammaystirin.\"  >\n  \t<label class=\"form-check-label\"  for=\"f8_1\">\n  \t\tIn isaga ragga keliyuhu jeclaado.\n  \t</label>\n  </div>\n\n  <div class=\"form-check\">\n  \t<input class=\"form-check-input\"  id=\"f8_2\" name=\"f8\"  type=\"radio\" value=\"In isaga dumarka keliyuhu jeclaado.\"  >\n  \t<label class=\"form-check-label\"  for=\"f8_2\">\n  \t\tIn isaga dumarka keliyuhu jeclaado.\n  \t</label>\n  </div>\n\n  <div class=\"form-check\">\n  \t<input class=\"form-check-input\"  id=\"f8_3\" name=\"f8\"  type=\"radio\" value=\"In isaga ragga iyo dumarka, iyo carruurtuba ay wada jeclaadaan.\"  >\n  \t<label class=\"form-check-label\"  for=\"f8_3\">\n  \t\tIn isaga ragga iyo dumarka, iyo carruurtuba ay wada jeclaadaan.\n  \t</label>\n  </div>\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f9 required\" data-fid=\"f9\">\n  <label class=\"control-label\" for=\"f9\">4. Maalintii ugu dambaysay uumista, Ilaah</label>\n\n<div class=\"form-check\">\n  \t<input class=\"form-check-input\"  id=\"f9_1\" name=\"f9\"  type=\"radio\" value=\"Wuxuu kala soocay birriga iyo badaha.\" \n    data-rule-required=\"true\" data-msg-required=\"Raalli ahow walaal, laakiin su&#039;aashan lama dhammaystirin.\"  >\n  \t<label class=\"form-check-label\"  for=\"f9_1\">\n  \t\tWuxuu kala soocay birriga iyo badaha.\n  \t</label>\n  </div>\n\n  <div class=\"form-check\">\n  \t<input class=\"form-check-input\"  id=\"f9_2\" name=\"f9\"  type=\"radio\" value=\"Wuxuu uumay nin.\"  >\n  \t<label class=\"form-check-label\"  for=\"f9_2\">\n  \t\tWuxuu uumay nin.\n  \t</label>\n  </div>\n\n  <div class=\"form-check\">\n  \t<input class=\"form-check-input\"  id=\"f9_3\" name=\"f9\"  type=\"radio\" value=\"Wuxuu yiri, &quot;Iftiin ha ahaado&quot;\"  >\n  \t<label class=\"form-check-label\"  for=\"f9_3\">\n  \t\tWuxuu yiri, \"Iftiin ha ahaado\"\n  \t</label>\n  </div>\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f10 required\" data-fid=\"f10\">\n  <label class=\"control-label\" for=\"f10\">5. Ilaah wuxuu jecel yahay</label>\n\n<div class=\"form-check\">\n  \t<input class=\"form-check-input\"  id=\"f10_1\" name=\"f10\"  type=\"radio\" value=\"Dembigeenna.\" \n    data-rule-required=\"true\" data-msg-required=\"Raalli ahow walaal, laakiin su&#039;aashan lama dhammaystirin.\"  >\n  \t<label class=\"form-check-label\"  for=\"f10_1\">\n  \t\tDembigeenna.\n  \t</label>\n  </div>\n\n  <div class=\"form-check\">\n  \t<input class=\"form-check-input\"  id=\"f10_2\" name=\"f10\"  type=\"radio\" value=\"Innaga iyo dembigeennaba.\"  >\n  \t<label class=\"form-check-label\"  for=\"f10_2\">\n  \t\tInnaga iyo dembigeennaba.\n  \t</label>\n  </div>\n\n  <div class=\"form-check\">\n  \t<input class=\"form-check-input\"  id=\"f10_3\" name=\"f10\"  type=\"radio\" value=\"Innaga.\"  >\n  \t<label class=\"form-check-label\"  for=\"f10_3\">\n  \t\tInnaga.\n  \t</label>\n  </div>\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f15 required\" data-fid=\"f15\">\n  <label class=\"control-label\" for=\"f15\">6. Ilaah waa qoduus, taas aawadeed muxuu ciqaabi doonaa?</label>\n\n\n<input type=\"text\" class=\"form-control\" id=\"f15\" name=\"f15\" value=\"\"    \n    data-rule-required=\"true\" data-msg-required=\"Raalli ahow walaal, laakiin su&#039;aashan lama dhammaystirin.\"  />\n\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f16 required\" data-fid=\"f16\">\n  <label class=\"control-label\" for=\"f16\">7. Bilowgii Ilaah muxuu abuuray? </label>\n\n\n<input type=\"text\" class=\"form-control\" id=\"f16\" name=\"f16\" value=\"\"    \n    data-rule-required=\"true\" data-msg-required=\"Raalli ahow walaal, laakiin su&#039;aashan lama dhammaystirin.\"  />\n\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f17 required\" data-fid=\"f17\">\n  <label class=\"control-label\" for=\"f17\">8. Bal yaa weligiis jiray, weligiisna jiri doona?</label>\n\n\n<input type=\"text\" class=\"form-control\" id=\"f17\" name=\"f17\" value=\"\"    \n    data-rule-required=\"true\" data-msg-required=\"Raalli ahow walaal, laakiin su&#039;aashan lama dhammaystirin.\"  />\n\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f20 required\" data-fid=\"f20\">\n  <label class=\"control-label\" for=\"f20\">9. Waxaa jira Ilaah keliya oo run ah.</label>\n\n<div class=\"form-check\">\n  \t<input class=\"form-check-input\"  id=\"f20_1\" name=\"f20\"  type=\"radio\" value=\"Run\" \n    data-rule-required=\"true\" data-msg-required=\"Raalli ahow walaal, laakiin su&#039;aashan lama dhammaystirin.\"  >\n  \t<label class=\"form-check-label\"  for=\"f20_1\">\n  \t\tRun\n  \t</label>\n  </div>\n\n  <div class=\"form-check\">\n  \t<input class=\"form-check-input\"  id=\"f20_2\" name=\"f20\"  type=\"radio\" value=\"Been\"  >\n  \t<label class=\"form-check-label\"  for=\"f20_2\">\n  \t\tBeen\n  \t</label>\n  </div>\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f19 required\" data-fid=\"f19\">\n  <label class=\"control-label\" for=\"f19\">10. Ilaah wax kasta wuu og yahay.</label>\n\n<div class=\"form-check\">\n  \t<input class=\"form-check-input\"  id=\"f19_1\" name=\"f19\"  type=\"radio\" value=\"Run\" \n    data-rule-required=\"true\" data-msg-required=\"Raalli ahow walaal, laakiin su&#039;aashan lama dhammaystirin.\"  >\n  \t<label class=\"form-check-label\"  for=\"f19_1\">\n  \t\tRun\n  \t</label>\n  </div>\n\n  <div class=\"form-check\">\n  \t<input class=\"form-check-input\"  id=\"f19_2\" name=\"f19\"  type=\"radio\" value=\"Been\"  >\n  \t<label class=\"form-check-label\"  for=\"f19_2\">\n  \t\tBeen\n  \t</label>\n  </div>\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f21 required\" data-fid=\"f21\">\n  <label class=\"control-label\" for=\"f21\">Magacaaga oo dhan:</label>\n\n\n<input type=\"text\" class=\"form-control\" id=\"f21\" name=\"f21\" value=\"\"    \n    data-rule-required=\"true\" data-msg-required=\"Fadlan magacaa u qor.\"  />\n\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f22 required\" data-fid=\"f22\">\n  <label class=\"control-label\" for=\"f22\">Cinwaanka Iimaylka:</label>\n\n\n<input type=\"email\" class=\"form-control\" id=\"f22\" name=\"f22\" value=\"\"   \n    data-rule-email=\"true\" \n    data-rule-required=\"true\" data-msg-required=\"Fadlan cinwaankaaga iimaylka u qor.\"  />\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f23 \" data-fid=\"f23\">\n  <label class=\"control-label\" for=\"f23\">Magaalada:</label>\n\n\n<input type=\"text\" class=\"form-control\" id=\"f23\" name=\"f23\" value=\"\"     />\n\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f24 \" data-fid=\"f24\">\n  <label class=\"control-label\" for=\"f24\">Waddanka:</label>\n\n\n<input type=\"text\" class=\"form-control\" id=\"f24\" name=\"f24\" value=\"\"     />\n\n\n  \n</div>\n\n\n\n\n<div class=\"form-group f25 \" data-fid=\"f25\">\n  <label class=\"control-label\" for=\"f25\">Su'aal ama Ra'yi:</label>\n\n\n<textarea class=\"form-control\" id=\"f25\" name=\"f25\" rows=\"3\"   ></textarea>\n\n  \n</div>\n\n\n\n<div class=\"form-group submit f0 \" data-fid=\"f0\" style=\"position: relative;\">\n  <label class=\"control-label sr-only\" for=\"f0\" style=\"display: block;\">Submit Button</label>\n\n  <div class=\"progress\" style=\"display: none; z-index: -1; position: absolute;\">\n    <div class=\"progress-bar progress-bar-striped active\" role=\"progressbar\" style=\"width:100%\">\n    </div>\n  </div>\n\n  <button type=\"submit\" class=\"btn btn-primary btn-lg\" style=\"z-index: 1;\">\n  \t\tRiix oo dir\n  </button>\n\n</div><div class=\"clearfix\"></div>\n\n<div class=\"submit\">\n  <p class=\"error bg-warning\" style=\"display:none;\">\n    Fadlan, eeg oo hubi meelaha/qodobada lagaaga baahan yahay oo dhan.</p>\n</div>\n\n<div class=\"clearfix\"></div>\n\n                        <span mbr-buttons=\"\" mbr-theme-style=\"display-4\" data-toolbar=\"-mbrLink,-mbrBtnAdd,-mbrBtnMove\" class=\"input-group-btn\">\n                            <a href=\"\" type=\"submit\" class=\"btn btn-primary btn-form\">SEND FORM</a>\n                        </span>\n                    </form>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "r3W7Fwd8ok",
+          "_anchor": "form1-18",
           "_PHPplaceholders": [],
           "_JSplaceholders": [],
           "_protectedParams": [],
