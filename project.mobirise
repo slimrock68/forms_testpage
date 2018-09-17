@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "TestSiteForForms",
-    "currentPage": "index.html",
+    "currentPage": "page2.html",
     "theme": {
       "name": "mobirise4",
       "title": "Mobirise 4",
@@ -2063,7 +2063,7 @@
               "text-align": "center"
             },
             "body": {
-              "background-color": "transparent"
+              "background-color": ""
             },
             ".jf-form": {
               "margin-top": "28px"
